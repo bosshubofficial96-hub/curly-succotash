@@ -1,8 +1,8 @@
-python-telegram-bot==20.7
-yt-dlp
-aiohttp
-Pillow
-PyPDF2
-pytesseract
-moviepy
-requests
+python-telegram-bot
+aiohttp 
+aiosqlite 
+python-dotenv 
+aiofiles 
+yt-dlp 
+cryptography 
+m3u8
