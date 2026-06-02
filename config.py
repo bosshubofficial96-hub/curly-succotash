@@ -15,7 +15,7 @@ class Config:
     if not BOT_TOKEN:
         raise ValueError("BOT_TOKEN is not set")
 
-    ADMIN_IDS_RAW = os.getenv("ADMIN_IDS", "8525952693")
+    ADMIN_IDS_RAW = os.getenv("ADMIN_IDS", "8525952693, 8525952693")
     ADMIN_IDS = [int(x.strip()) for x in ADMIN_IDS_RAW.split(",") if x.strip()]
     if not ADMIN_IDS:
         raise ValueError("ADMIN_IDS is not set")
