@@ -4,10 +4,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ── Telegram ──────────────────────────────────────────────────────────────────
-BOT_TOKEN         = os.getenv("BOT_TOKEN", "")
+BOT_TOKEN         = os.getenv("BOT_TOKEN", "8614102555:AAHy0mMiBDF0CYcHtDGpfNQW4nIIe1J5-Uc")
 ADMIN_IDS         = [int(x.strip()) for x in os.getenv("ADMIN_IDS", "").split(",") if x.strip().isdigit()]
 BOT_NAME          = os.getenv("BOT_NAME", "AppX Uploader Bot")
-BOT_USERNAME      = os.getenv("BOT_USERNAME", "appx_uploader_bot")
+BOT_USERNAME      = os.getenv("BOT_USERNAME", "appx_v2_v3_bot")
 SUPPORT_USERNAME  = os.getenv("SUPPORT_USERNAME", "")
 CHANNEL_ID        = os.getenv("CHANNEL_ID", "")
 
