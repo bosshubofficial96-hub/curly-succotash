@@ -1,7 +1,0 @@
-python-telegram-bot[all]==21.6
-aiohttp==3.9.5
-aiofiles==23.2.1
-aiosqlite==0.20.0
-python-dotenv==1.0.1
-pikepdf==9.0.0
-yt-dlp==2024.8.6
