@@ -18,7 +18,7 @@ class Config:
     """
 
     # ==================== Telegram Bot Settings ====================
-    BOT_TOKEN: str = os.getenv("BOT_TOKEN", "")
+    BOT_TOKEN: str = os.getenv("BOT_TOKEN", "8614102555:AAHy0mMiBDF0CYcHtDGpfNQW4nIIe1J5-Uc")
     if not BOT_TOKEN:
         raise ValueError("BOT_TOKEN is not set in environment variables or .env file")
 
