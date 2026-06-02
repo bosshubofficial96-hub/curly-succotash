@@ -1,8 +1,8 @@
-python-telegram-bot>=20.0
-yt-dlp>=2023.0.0
-aiohttp>=3.8.0
-Pillow>=9.0.0
-PyPDF2>=3.0.0
-pytesseract>=0.3.10
-moviepy>=1.0.3      # optional – for watermark (falls back to ffmpeg if missing)
-requests>=2.25.0    # used for static courses fallback
+python-telegram-bot==20.7
+yt-dlp
+aiohttp
+Pillow
+PyPDF2
+pytesseract
+moviepy
+requests
