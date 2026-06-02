@@ -10,20 +10,26 @@ load_dotenv()
 
 
 class Config:
-    # Telegram
+    # Telegram Bot Token (required)
     BOT_TOKEN = os.getenv("BOT_TOKEN", "8614102555:AAHy0mMiBDF0CYcHtDGpfNQW4nIIe1J5-Uc")
     if not BOT_TOKEN:
-        raise ValueError("BOT_TOKEN is not set")
+        raise ValueError("BOT_TOKEN is missing. Set it in .env or as environment variable.")
 
-    ADMIN_IDS_RAW = os.getenv("ADMIN_IDS", "8525952693, 8525952693")
-    ADMIN_IDS = [int(x.strip()) for x in ADMIN_IDS_RAW.split(",") if x.strip()]
+    # Admin IDs (comma-separated, required)
+    ADMIN_IDS_RAW = os.getenv("ADMIN_IDS", "5968883359")
+    ADMIN_IDS = []
+    if ADMIN_IDS_RAW:
+        try:
+            ADMIN_IDS = [int(x.strip()) for x in ADMIN_IDS_RAW.split(",") if x.strip()]
+        except ValueError:
+            raise ValueError("ADMIN_IDS must contain only numbers separated by commas.")
     if not ADMIN_IDS:
-        raise ValueError("ADMIN_IDS is not set")
+        raise ValueError("ADMIN_IDS is missing or empty. Set at least one admin user ID.")
 
     # Database
     DATABASE_URL = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./bot_data.db")
 
-    # Download
+    # Download settings
     DOWNLOAD_TIMEOUT = int(os.getenv("DOWNLOAD_TIMEOUT", "300"))
     MAX_FILE_SIZE_MB = int(os.getenv("MAX_FILE_SIZE_MB", "50"))
     MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024
@@ -56,7 +62,7 @@ class Config:
     LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     LOG_DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
 
-    # Google Drive
+    # Google Drive (optional)
     GOOGLE_DRIVE_ENABLED = os.getenv("GOOGLE_DRIVE_ENABLED", "false").lower() == "true"
     GOOGLE_DRIVE_FOLDER_ID = os.getenv("GOOGLE_DRIVE_FOLDER_ID", "")
     GOOGLE_DRIVE_CREDENTIALS_FILE = Path(os.getenv("GOOGLE_DRIVE_CREDENTIALS_FILE", "./credentials.json"))
@@ -104,6 +110,5 @@ class Config:
         return True
 
 
-# Auto-create directories
-if __name__ != "__main__":
-    Config.ensure_directories()
+# Auto-create directories on import
+Config.ensure_directories()
