@@ -1,0 +1,6 @@
+[build]
+
+[deploy]
+
+[deploy.variables]
+RAILPACK_BUILD_APT_PACKAGES = "libqpdf-dev"
