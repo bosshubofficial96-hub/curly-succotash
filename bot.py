@@ -93,7 +93,7 @@ class Config:
     """Master configuration class"""
     
     # Bot Configuration
-    BOT_TOKEN = os.getenv("BOT_TOKEN", "8828772252:AAEnP5IGOS5G5MBp2IkH1Cw1JU9l-1A3HDE")
+    BOT_TOKEN = os.getenv("BOT_TOKEN", "8748956642:AAF_vXkcEwdDvOoaTPTpqHwl8z1V8LVDubk")
     BOT_NAME = os.getenv("BOT_NAME", "DRM Extractor Bot")
     BOT_VERSION = "4.0.0"
     
