@@ -86,6 +86,15 @@ BOT_THEME_COLOR       = os.getenv("BOT_THEME_COLOR", "#6C63FF")
 BOT_ACCENT_COLOR      = os.getenv("BOT_ACCENT_COLOR", "#FF6584")
 BOT_LOGO_EMOJI        = os.getenv("BOT_LOGO_EMOJI", "🤖")
 
+# Add near the bottom of settings.py, after other constants
+
+# ── PDF decryption passwords ──────────────────────────────────────────────────
+PDF_PASSWORDS = [
+    "", "appx", "appxco", "appx123", "123456", "password",
+    "appxlearn", "learn", "course", "admin", "student",
+    "pdf", "protected", "secure", "locked", "appx2024", "appx2025",
+]
+
 # ── AppX CDN headers (simulates browser on appx.co.in) ───────────────────────
 APPX_HEADERS = {
     "User-Agent":         USER_AGENT,
