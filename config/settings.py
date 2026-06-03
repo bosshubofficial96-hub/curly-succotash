@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ── Telegram ──────────────────────────────────────────────────────────────────
-BOT_TOKEN         = os.getenv("BOT_TOKEN", "")
-ADMIN_IDS         = [int(x.strip()) for x in os.getenv("ADMIN_IDS", "").split(",") if x.strip().isdigit()]
+BOT_TOKEN         = os.getenv("BOT_TOKEN", "8614102555:AAHy0mMiBDF0CYcHtDGpfNQW4nIIe1J5-Uc")
+ADMIN_IDS         = [int(x.strip()) for x in os.getenv("ADMIN_IDS", "8525952693").split(",") if x.strip().isdigit()]
 BOT_NAME          = os.getenv("BOT_NAME", "AppX Uploader Bot")
 BOT_USERNAME      = os.getenv("BOT_USERNAME", "appx_uploader_bot")
 SUPPORT_USERNAME  = os.getenv("SUPPORT_USERNAME", "")
@@ -46,7 +46,7 @@ USER_AGENT        = os.getenv("USER_AGENT",
 API_HOST          = os.getenv("API_HOST", "0.0.0.0")
 API_PORT          = int(os.getenv("API_PORT", "8080"))
 API_SECRET        = os.getenv("API_SECRET", "change_me_in_production")
-API_DOMAIN        = os.getenv("API_DOMAIN", "")
+API_DOMAIN        = os.getenv("API_DOMAIN", "https://apixapp.up.Railway.app")
 API_ENABLED       = os.getenv("API_ENABLED", "true").lower() == "true"
 
 # Bypass API (own resolution service)
