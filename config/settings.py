@@ -8,8 +8,8 @@ BOT_TOKEN         = os.getenv("BOT_TOKEN", "8614102555:AAHy0mMiBDF0CYcHtDGpfNQW4
 ADMIN_IDS         = [int(x.strip()) for x in os.getenv("ADMIN_IDS", "8525952693").split(",") if x.strip().isdigit()]
 BOT_NAME          = os.getenv("BOT_NAME", "AppX Uploader Bot")
 BOT_USERNAME      = os.getenv("BOT_USERNAME", "appx_uploader_bot")
-SUPPORT_USERNAME  = os.getenv("SUPPORT_USERNAME", "")
-CHANNEL_ID        = os.getenv("CHANNEL_ID", "")
+SUPPORT_USERNAME  = os.getenv("SUPPORT_USERNAME", "@funnytamilan")
+CHANNEL_ID        = os.getenv("CHANNEL_ID", "-1003505154626")
 
 # ── AppX credentials ──────────────────────────────────────────────────────────
 APPX_EMAIL        = os.getenv("APPX_EMAIL", "")
@@ -63,7 +63,7 @@ ASSETS_DIR        = os.getenv("ASSETS_DIR", "assets")
 MAX_RETRIES          = int(os.getenv("MAX_RETRIES", "5"))
 RETRY_DELAY          = int(os.getenv("RETRY_DELAY", "3"))
 DOWNLOAD_TIMEOUT     = int(os.getenv("DOWNLOAD_TIMEOUT", "900"))
-MAX_FILE_SIZE_MB     = int(os.getenv("MAX_FILE_SIZE_MB", "4000"))
+MAX_FILE_SIZE_MB     = int(os.getenv("MAX_FILE_SIZE_MB", "4096"))
 CHUNK_SIZE           = int(os.getenv("CHUNK_SIZE", str(8 * 1024 * 1024)))   # 8 MB
 MAX_CONNECTIONS      = int(os.getenv("MAX_CONNECTIONS", "16"))
 MAX_CONNECTIONS_PER_HOST = int(os.getenv("MAX_CONNECTIONS_PER_HOST", "8"))
