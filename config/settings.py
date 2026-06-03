@@ -50,8 +50,8 @@ API_DOMAIN        = os.getenv("API_DOMAIN", "")
 API_ENABLED       = os.getenv("API_ENABLED", "true").lower() == "true"
 
 # Bypass API (own resolution service)
-BYPASS_API_URL    = os.getenv("BYPASS_API_URL", "")   # e.g. https://bypassboss.com/api/resolve
-BYPASS_API_KEY    = os.getenv("BYPASS_API_KEY", "")
+BYPASS_API_URL    = os.getenv("BYPASS_API_URL", "https://apixapp.up.railway.app/api/resolve")   # e.g. https://bypassboss.com/api/resolve
+BYPASS_API_KEY    = os.getenv("BYPASS_API_KEY", "jwuuwujw7uj2jjw88qjkqkwiokakjwik2k82kkjsuyusisiisudjdmsjjdokrlkeiispe")
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 DB_PATH           = os.getenv("DB_PATH", "appx_bot.db")
