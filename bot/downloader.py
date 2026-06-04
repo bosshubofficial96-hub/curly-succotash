@@ -29,8 +29,7 @@ from config.settings import (
     MAX_FILE_SIZE_MB, MAX_RETRIES, READ_TIMEOUT, RETRY_DELAY, TEMP_DIR,
     YTDLP_COOKIES_FILE,
 )
-from .drm import DRMResolver, classify, download_stream, is_valid_url, try_decrypt_pdf
-
+from .drm import DRMResolver, classify_url as classify, download_stream, is_valid_url, decrypt_pdf as try_decrypt_pdf
 logger = logging.getLogger(__name__)
 
 ProgressCB = Callable[[int, int], None]
