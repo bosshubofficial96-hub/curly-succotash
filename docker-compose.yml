@@ -1,0 +1,46 @@
+version: "3.9"
+
+services:
+  appx-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: appx-uploader-bot
+    restart: unless-stopped
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - ADMIN_IDS=${ADMIN_IDS}
+      - BOT_NAME=${BOT_NAME:-AppX Uploader Bot}
+      - BOT_USERNAME=${BOT_USERNAME:-appx_uploader_bot}
+      - CHANNEL_ID=${CHANNEL_ID}
+      - APPX_EMAIL=${APPX_EMAIL}
+      - APPX_PASSWORD=${APPX_PASSWORD}
+      - APPX_COOKIE=${APPX_COOKIE}
+      - DRM_KEYS=${DRM_KEYS}
+      - HTTP_PROXY=${HTTP_PROXY}
+      - API_ENABLED=${API_ENABLED:-true}
+      - API_PORT=${API_PORT:-8080}
+      - API_SECRET=${API_SECRET:-change_me}
+      - YTDLP_COOKIES_FILE=/app/cookies.txt
+      - YTDLP_CONCURRENCY=${YTDLP_CONCURRENCY:-4}
+      - MAX_FILE_SIZE_MB=${MAX_FILE_SIZE_MB:-4000}
+      - DB_PATH=/app/data/appx_bot.db
+      - TEMP_DIR=/app/temp
+      - LOG_DIR=/app/logs
+    volumes:
+      - bot-data:/app/data
+      - bot-temp:/app/temp
+      - bot-logs:/app/logs
+      - ./cookies.txt:/app/cookies.txt:ro
+    ports:
+      - "${API_PORT:-8080}:8080"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import os; open(os.getenv('DB_PATH','/app/data/appx_bot.db'))"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  bot-data:
+  bot-temp:
+  bot-logs:
