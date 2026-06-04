@@ -22,7 +22,9 @@ from config.settings import (
     REQUIRE_JOIN_CHANNEL, TEMP_DIR, WELCOME_IMAGE_ENABLED,
 )
 from database.db import Database
-from .drm import appx_login, is_valid_url
+# Change from:
+# To the correct module name, e.g.:
+from .drm_module import appx_login, is_valid_url
 from .fonts import APP_NAME, DIVIDER, TAGLINE, bold, script, smallcaps
 from .image_gen import generate_welcome_card, get_svg_source
 from .keyboards import (
