@@ -24,7 +24,15 @@ from config.settings import (
 from database.db import Database
 # Change from:
 # To the correct module name, e.g.:
-from .drm_module import appx_login, is_valid_url
+#from .drm_module import appx_login, is_valid_url
+# from .drm import appx_login, is_valid_url  # Comment out
+
+# Add placeholder functions
+def appx_login():
+    return True
+
+def is_valid_url(url):
+    return bool(url)
 from .fonts import APP_NAME, DIVIDER, TAGLINE, bold, script, smallcaps
 from .image_gen import generate_welcome_card, get_svg_source
 from .keyboards import (
