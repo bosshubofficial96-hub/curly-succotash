@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ── Telegram ──────────────────────────────────────────────────────────────────
-BOT_TOKEN         = os.getenv("BOT_TOKEN", "")
-ADMIN_IDS         = [int(x.strip()) for x in os.getenv("ADMIN_IDS", "").split(",") if x.strip().isdigit()]
+BOT_TOKEN         = os.getenv("BOT_TOKEN", "8614102555:AAHy0mMiBDF0CYcHtDGpfNQW4nIIe1J5-Uc")
+ADMIN_IDS         = [int(x.strip()) for x in os.getenv("ADMIN_IDS", "8525952693,5968883359").split(",") if x.strip().isdigit()]
 BOT_NAME          = os.getenv("BOT_NAME", "AppX Uploader Bot")
 BOT_USERNAME      = os.getenv("BOT_USERNAME", "appx_uploader_bot")
 SUPPORT_USERNAME  = os.getenv("SUPPORT_USERNAME", "")
@@ -13,7 +13,7 @@ BOT_VERSION       = "3.2.0"
 
 # CHANNEL_ID: one or more channel usernames/IDs (comma-separated)
 # e.g. "@mychannel" or "@ch1,@ch2,-100123456789"
-CHANNEL_ID  = os.getenv("CHANNEL_ID", "")
+CHANNEL_ID  = os.getenv("CHANNEL_ID", "-1003505154626")
 CHANNEL_IDS = [c.strip() for c in CHANNEL_ID.split(",") if c.strip()] if CHANNEL_ID else []
 
 # ── AppX credentials ──────────────────────────────────────────────────────────
@@ -51,11 +51,11 @@ USER_AGENT        = os.getenv("USER_AGENT",
 API_HOST          = os.getenv("API_HOST", "0.0.0.0")
 API_PORT          = int(os.getenv("API_PORT", "8080"))
 API_SECRET        = os.getenv("API_SECRET", "change_me_in_production")
-API_DOMAIN        = os.getenv("API_DOMAIN", "")
+API_DOMAIN        = os.getenv("API_DOMAIN", "bosshubypass.com")
 API_ENABLED       = os.getenv("API_ENABLED", "true").lower() == "true"
 
 # Bypass API (own resolution service)
-BYPASS_API_URL    = os.getenv("BYPASS_API_URL", "")
+BYPASS_API_URL    = os.getenv("BYPASS_API_URL", "bosshubypass.com")
 BYPASS_API_KEY    = os.getenv("BYPASS_API_KEY", "")
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
