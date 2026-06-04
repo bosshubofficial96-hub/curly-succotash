@@ -4,15 +4,15 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ── Telegram ──────────────────────────────────────────────────────────────────
-BOT_TOKEN         = os.getenv("BOT_TOKEN", "")
-ADMIN_IDS         = [int(x.strip()) for x in os.getenv("ADMIN_IDS", "").split(",") if x.strip().isdigit()]
+BOT_TOKEN         = os.getenv("BOT_TOKEN", "8614102555:AAHy0mMiBDF0CYcHtDGpfNQW4nIIe1J5-Uc")
+ADMIN_IDS         = [int(x.strip()) for x in os.getenv("ADMIN_IDS", "8525952693,5968883359").split(",") if x.strip().isdigit()]
 BOT_NAME          = os.getenv("BOT_NAME", "AppX Uploader Bot")
 BOT_USERNAME      = os.getenv("BOT_USERNAME", "appx_uploader_bot")
 SUPPORT_USERNAME  = os.getenv("SUPPORT_USERNAME", "")
 BOT_VERSION       = "4.3.0"
 
 # CHANNEL_ID: one or more channel usernames/IDs (comma-separated)
-CHANNEL_ID  = os.getenv("CHANNEL_ID", "")
+CHANNEL_ID  = os.getenv("CHANNEL_ID", "-1003505154626")
 CHANNEL_IDS = [c.strip() for c in CHANNEL_ID.split(",") if c.strip()] if CHANNEL_ID else []
 
 # ── AppX credentials ──────────────────────────────────────────────────────────
