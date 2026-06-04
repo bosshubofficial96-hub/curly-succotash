@@ -1,0 +1,25 @@
+# ── Telegram bot ─────────────────────────────────────────────────────────────
+python-telegram-bot==21.6
+
+# ── Environment / config ─────────────────────────────────────────────────────
+python-dotenv==1.0.1
+
+# ── Async HTTP, I/O ─────────────────────────────────────────────────────────
+aiohttp==3.9.5
+aiofiles==23.2.1
+aiosqlite==0.20.0
+
+# ── Stream / DRM download ────────────────────────────────────────────────────
+yt-dlp>=2024.1.1
+
+# ── PDF decryption ────────────────────────────────────────────────────────────
+pikepdf>=9.0.0
+
+# ── Image generation ─────────────────────────────────────────────────────────
+Pillow>=10.3.0
+
+# ── SVG → PNG (optional, best quality) ──────────────────────────────────────
+# Install system deps first:
+#   sudo apt-get install libcairo2-dev pkg-config python3-dev
+# Then:
+cairosvg>=2.7.1
