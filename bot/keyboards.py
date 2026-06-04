@@ -225,8 +225,8 @@ def v2_download_kb(bot_username: str = "", jid: str = "") -> Optional[M]:
     rows = []
     if uname and jid:
         rows.append([B("📥 Bypass & Get File",
-                       url=f"https://t.me/{uname}?start=getfile_{jid}")])
+                       url=f"https://t.me/appx_v2_3_bot?start=getfile_{jid}")])
     elif uname:
         rows.append([B("📥 Download via Bot",
-                       url=f"https://t.me/{uname}")])
+                       url=f"https://t.me/appx_v2_3bot?start=getfile_{jid}")])
     return M(rows) if rows else None
